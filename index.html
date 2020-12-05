@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eagles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="sidebar_button" onclick="sidebar()" style="font-size: xx-large;">🦅</div>
+
+    <div id="navbar">
+        <div id="home" onclick="document.location='index.html'"><button>
+                <p>Home</p>
+            </button></div>
+        <div id="donations"><button>
+                <p>Donations</p>
+            </button></div>
+        <div id="author"><button>
+                <p>Author</p>
+            </button></div>
+        <div id="credits" onclick="document.location='html/credits.html'"><button>
+                <p>Credits</p>
+            </button></div>
+        <div id="credits"><button onclick="document.location='https://www.amazon.com/s?k=bald+eagles&ref=nb_sb_noss_1'">
+                <p>Shop</p>
+            </button></div>
+        <div>
+            <!--spacer-->
+        </div>
+
+    </div>
+    <div id="sidebar">
+        <div id="sidebar_content" style="display: none;">
+            <a href="html/credits.html"><p>Eagle Details</p></a>
+
+            <a href="html/credits.html"><p>Resources</p></a>
+
+            <a href="html/credits.html"><p>Credits</p></a>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="page" id="first">
+            <h1>Bald Eagle</h1>
+            <div id="firstContent">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore
+                    magna aliqua. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim. Convallis posuere
+                    morbi
+                    leo urna molestie at elementum. Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel.
+                    Imperdiet
+                    massa
+                    tincidunt nunc pulvinar sapien et ligula. Sollicitudin tempor id eu nisl nunc mi ipsum. Eu non diam
+                    phasellus vestibulum. Non curabitur gravida arcu ac tortor dignissim convallis aenean et. Volutpat
+                    odio
+                    facilisis mauris sit amet massa vitae tortor condimentum. Ultrices neque ornare aenean euismod
+                    elementum
+                    nisi. Urna molestie at elementum eu facilisis sed odio. In vitae turpis massa sed elementum tempus
+                    egestas
+                    sed sed. At tellus at urna condimentum mattis pellentesque. Tempus urna et pharetra pharetra massa
+                    massa
+                    ultricies mi quis. Nisl tincidunt eget nullam non nisi est sit amet. Mauris cursus mattis molestie
+                    a. Ac
+                    orci phasellus egestas tellus rutrum tellus. Etiam non quam lacus suspendisse faucibus. Magna eget
+                    est
+                    lorem
+                    ipsum dolor sit amet. Integer vitae justo eget magna fermentum iaculis. Tempor id eu nisl nunc mi
+                    ipsum
+                    faucibus. Sed vulputate odio ut enim. Lectus urna duis convallis convallis tellus id interdum velit
+                    laoreet.
+                    Libero nunc consequat interdum varius sit amet mattis vulputate enim. Tellus id interdum velit
+                    laoreet
+                    id
+                    donec ultrices tincidunt arcu. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper
+                    velit.
+                </p>
+            </div>
+        </div>
+        <div class="page" id="second">
+            <h2>Overview</h2>
+            <img src="photos/SecondPic.jpg" alt="Photo of another eagle" id="photoTwo">
+            <div id="secondContent">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore
+                    magna aliqua. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim. Convallis posuere
+                    morbi
+                    leo urna molestie at elementum. Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel.
+                    Imperdiet
+                    massa
+                    tincidunt nunc pulvinar sapien et ligula. Sollicitudin tempor id eu nisl nunc mi ipsum. Eu non diam
+                    phasellus vestibulum. Non curabitur gravida arcu ac tortor dignissim convallis aenean et. Volutpat
+                    odio
+                    facilisis mauris sit amet massa vitae tortor condimentum. Ultrices neque ornare aenean euismod
+                    elementum
+                    nisi. Urna molestie at elementum eu facilisis sed odio. In vitae turpis massa sed elementum tempus
+                    egestas
+                    sed sed. At tellus at urna condimentum mattis pellentesque. Tempus urna et pharetra pharetra massa
+                    massa
+                    ultricies mi quis. Nisl tincidunt eget nullam non nisi est sit amet. Mauris cursus mattis molestie
+                    a. Ac
+                    orci phasellus egestas tellus rutrum tellus. Etiam non quam lacus suspendisse faucibus. Magna eget
+                    est
+                    lorem
+                    ipsum dolor sit amet. Integer vitae justo eget magna fermentum iaculis. Tempor id eu nisl nunc mi
+                    ipsum
+                    faucibus. Sed vulputate odio ut enim. Lectus urna duis convallis convallis tellus id interdum velit
+                    laoreet.
+                    Libero nunc consequat interdum varius sit amet mattis vulputate enim. Tellus id interdum velit
+                    laoreet
+                    id
+                    donec ultrices tincidunt arcu. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper
+                    velit.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function sidebar() {
+        let widthOfSidebar = "20vw";
+        if (document.getElementById("sidebar").style.width == widthOfSidebar) {
+            document.getElementById("sidebar").style.width = "0px";
+            document.getElementById("main").style.marginLeft = "0px";
+            document.getElementById("sidebar_content").style.display = "none";
+
+        } else {
+            document.getElementById("sidebar").style.width = widthOfSidebar;
+            document.getElementById("main").style.marginLeft = widthOfSidebar;
+            setTimeout(function () {
+                document.getElementById("sidebar_content").style.display = "block";
+            }, 300);
+
+
+        }
+    }
+</script>
+
+</html>
